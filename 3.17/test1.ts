@@ -17,3 +17,7 @@ let arr2:Array<number> = [1, 2];
 let x:[string, string];
 x = ["name","小明"];
 console.log(x[0]);  
+//void类型，用于标识返回值的类型，表示该方法没有返回值
+function hello():void{
+    console.log("hello world");
+}
