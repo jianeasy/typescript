@@ -29,7 +29,7 @@ a = false;
 
 let arrList: any[] = [1, "hello", false];
 arrList[1] = 100;
-
+//联合类型
 let b:number | null | undefined | string;//一个变量可以出现多个类型
 b = 1;
 b = null;
@@ -66,3 +66,22 @@ console.log("全局变量为: "+global_num)
 console.log(Numbers.sval)   // 静态变量
 var obj = new Numbers(); 
 console.log("实例变量: "+obj.num_val)
+
+//函数
+function greet():void{
+    console.log("hello ");
+}
+function greet1(uname:string = "xiaoming"):void{//可以为参数指定默认值
+    console.log("hello "+uname);
+}
+//剩余参数
+//有一种情况，我们不知道要向函数传入多少个参数，这时候我们就可以使用剩余参数来定义。
+//剩余参数语法允许我们将一个不确定数量的参数作为一个数组传入。
+function add(...nums:number[]):number{
+    let i = 1;
+    let sum:number = 0;
+    for(i = 0;i < nums.length; i++){
+        sum = sum + i;
+    }
+    return sum;
+}
