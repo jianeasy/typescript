@@ -85,3 +85,19 @@ function add(...nums:number[]):number{
     }
     return sum;
 }
+//typescript类
+class Car{
+    //字段
+    engine:string;
+    //构造函数
+    constructor(engine:string){
+        this.engine = engine;
+    }
+    //方法
+    disp():void{
+        console.log("发动机为："+this.engine);
+    }
+}
+let car1 = new Car("engine1");
+console.log(car1.engine);//访问属性
+car1.disp();//访问类

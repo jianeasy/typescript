@@ -89,3 +89,18 @@ function add() {
     }
     return sum;
 }
+//typescript类
+var Car = /** @class */ (function () {
+    //构造函数
+    function Car(engine) {
+        this.engine = engine;
+    }
+    //方法
+    Car.prototype.disp = function () {
+        console.log("发动机为：" + this.engine);
+    };
+    return Car;
+}());
+var car1 = new Car("engine1");
+console.log(car1.engine); //访问属性
+car1.disp(); //访问类
